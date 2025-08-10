@@ -16,7 +16,7 @@ const fadeChild = {
   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
-const PokumaaLanding: React.FC = () => {
+export default function PokumaaLanding() {
   return (
     <main>
       {/* HERO */}
@@ -25,12 +25,7 @@ const PokumaaLanding: React.FC = () => {
         <div
           aria-hidden="true"
           className="absolute inset-0 bg-cover bg-center"
-          <div
-  aria-hidden="true"
-  className="absolute inset-0 bg-cover bg-center"
-  style={{ backgroundImage: "url('/252853-forest-light-and-mother.jpg')" }}
-/>
-
+          style={{ backgroundImage: "url('/assets/252853-forest-light-and-mother.jpg')" }} // kohanda rada kui pilt public/ juurel
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/30" />
 
@@ -75,6 +70,4 @@ const PokumaaLanding: React.FC = () => {
       </section>
     </main>
   );
-};
-
-export default PokumaaLanding;
+}
