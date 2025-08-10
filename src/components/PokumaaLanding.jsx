@@ -25,7 +25,12 @@ const PokumaaLanding: React.FC = () => {
         <div
           aria-hidden="true"
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/assets/hero-forest.jpg')" }} // pane oma loodusfoto siia
+          <div
+  aria-hidden="true"
+  className="absolute inset-0 bg-cover bg-center"
+  style={{ backgroundImage: "url('/252853-forest-light-and-mother.jpg')" }}
+/>
+
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/30" />
 
