@@ -1,15 +1,16 @@
-# pokumaa-lite
-# Pokumaa Lite — React + Vite + Tailwind (2025)
+# Pokumaa Lite
 
-Minimal mockup for the new **Pokumaa** website focused on KPI-driven UX:
-- Hero + selged CTA-d (Broneeri, E‑pood, Viktoriin)
-- E‑pood esilehel (3 toodet)
-- “Pokusõbrad” (e‑posti kogumine) ja viktoriini teaser
-- Blogi/lood ja partnerluse sektsioon (lihtsustatud)
-- Minimalistlik loodus-/metsatoonides UI
+This project provides a simple Pokumaa landing page built with React, Vite and Tailwind CSS. It includes KPI sections, call-to-action buttons and basic merchandise mockups.
 
-## Kiirkäivitus (loktaalne)
+## Development
+
 ```bash
-npm i
+npm install
 npm run dev
-# Ava: http://localhost:5173
+```
+
+## Build
+
+```bash
+npm run build
+```
