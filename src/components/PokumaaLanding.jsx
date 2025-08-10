@@ -36,25 +36,24 @@ const PokumaaLanding = () => {
         <h1 className="text-4xl font-bold mb-4">Tere tulemast Pokumaale</h1>
         <p className="mb-6 max-w-xl mx-auto">
           Avasta Pokumaa maagiline maailm, kus ootavad ees seiklused, sõbrad ja
-          palju põnevaid mänge.
+ põnevaid mänge.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <a
-            href={UUDISKIRI_URL}
-            className="px-6 py-3 bg-green-600 text-white rounded-md hover:bg-green-700"
-            aria-label="Liitu Pokumaaga"
-          >
+                <div className="flex flex-wrap justify-center gap-4">
+          <a href={BRONEERI_URL}
+             className="px-6 py-3 bg-green-600 text-white rounded-md hover:bg-green-700"
+             aria-label="Broneeri külastus">
+            Broneeri külastus     <a href={EPOOD_URL}
+             className="px-6 py-3 border border-green-600 text-green-600 rounded-md hover:bg-green-100"
+             aria-label="Vaata e-poodi">
+            Vaata e -poodi
+          </a>
+          <a href={UUDISKIRI_URL}
+             className="px-6 py-3 bg-blue-100 text-blue-900 rounded-md hover:bg-blue-200"
+             aria-label="Liitu uudiskirjaga">
             Liitu
           </a>
-          <a
-            href={BRONEERI_URL}
-            className="px-6 py-3 border border-green-600 text-green-600 rounded-md hover:bg-green-100"
-            aria-label="Vaata rohkem Pokumaa kohta"
-          >
-            Vaata rohkem
-          </a>
         </div>
-      </section>
 
       {/* Shop section with products */}
       <section aria-label="Pokumaa e‑pood" className="space-y-6">
