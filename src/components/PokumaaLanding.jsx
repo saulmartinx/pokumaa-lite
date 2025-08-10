@@ -40,15 +40,21 @@ const PokumaaLanding = () => {
         </p>
         <div className="flex flex-wrap justify-center gap-4">
                 <div className="flex flex-wrap justify-center gap-4">
-          <a href={BRONEERI_URL}
-             className="px-6 py-3 bg-green-600 text-white rounded-md hover:bg-green-700"
-             aria-label="Broneeri külastus">
-            Broneeri külastus     <a href={EPOOD_URL}
-             className="px-6 py-3 border border-green-600 text-green-600 rounded-md hover:bg-green-100"
-             aria-label="Vaata e-poodi">
-            Vaata e -poodi
-          </a>
-          <a href={UUDISKIRI_URL}
+          <div className="flex flex-wrap justify-center gap-4">
+  <a href={BRONEERI_URL} aria-label="Broneeri külastus"
+     className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-md">
+    Broneeri külastus
+  </a>
+  <a href={EPOOD_URL} aria-label="Vaata e‑poodi"
+     className="px-6 py-3 border border-green-600 text-green-600 rounded-md hover:bg-green-100">
+    Vaata e‑poodi
+  </a>
+  <a href={UUDISKIRI_URL} aria-label="Liitu uudiskirjaga"
+     className="px-6 py-3 bg-blue-100 text-blue-900 rounded-md hover:bg-blue-200">
+    Liitu uudiskirjaga
+  </a>
+</div>
+
              className="px-6 py-3 bg-blue-100 text-blue-900 rounded-md hover:bg-blue-200"
              aria-label="Liitu uudiskirjaga">
             Liitu
