@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { CTA_LINKS } from '../config.ts'
+import { BRONEERI_URL, EPOOD_URL, UUDISKIRI_URL } from '../config.ts'
 import NewsletterForm from './NewsletterForm.jsx'
 import ProductModal from './ProductModal.jsx'
 
@@ -40,14 +40,14 @@ const PokumaaLanding = () => {
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <a
-            href={CTA_LINKS.join}
+            href={UUDISKIRI_URL}
             className="px-6 py-3 bg-green-600 text-white rounded-md hover:bg-green-700"
             aria-label="Liitu Pokumaaga"
           >
             Liitu
           </a>
           <a
-            href={CTA_LINKS.learnMore}
+            href={BRONEERI_URL}
             className="px-6 py-3 border border-green-600 text-green-600 rounded-md hover:bg-green-100"
             aria-label="Vaata rohkem Pokumaa kohta"
           >
