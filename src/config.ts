@@ -1,18 +1,15 @@
-// Configuration for CTA links and API endpoints.
-// These placeholders can be replaced with real URLs when deploying.
+/**
+ * Configuration for CTA Links and API endpoints.
+ * These placeholders can be replaced with real URLs when deploying.
+ */
 
-export const CTA_LINKS = {
-  /** Link for the primary call‑to‑action (e.g. join Pokumaa). */
-  join: 'https://your-domain.com/join',
-  /** Link for the secondary call‑to‑action (e.g. learn more about Pokumaa). */
-  learnMore: 'https://your-domain.com/learn-more',
-  /** Link to the shop or merchandise section. */
-  shop: 'https://your-domain.com/shop',
-};
+export const BRONEERI_URL = 'https://pokumaa.ee/broneeri';
+export const EPOOD_URL = 'https://pokumaa.ee/epood';
+export const UUDISKIRI_URL = 'https://pokumaa.ee/uudiskiri';
 
 /**
- * Environment‑driven configuration.  At runtime Vite will replace
- * `import.meta.env` variables with their actual values.  Use this
- * endpoint for newsletter sign‑ups (e.g. Mailchimp or Klaviyo).
+ * Environment-driven configuration. At runtime vite will replace
+ * import.meta.env variables with their actual values. Use this
+ * endpoint for newsletter sign-ups (e.g. Mailchimp or Klaviyo).
  */
-export const NEWSLETTER_ENDPOINT = import.meta.env.VITE_NEWSLETTER_ENDPOINT ?? '';
+export const NEWSLETTER_ENDPOINT = import.meta.env.VITE_NEWSLETTER_ENDPOINT || '';
