@@ -1,7 +1,7 @@
-i
+
 
 /**
- * Modal component to display product details and provide a button to add the
+
  * product to a mock cart.  The modal is accessible and traps focus
  * implicitly through react tree since it is the only interactive element when
  * shown.  Images (if provided) should include a `loading="lazy"` attribute
