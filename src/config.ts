@@ -14,4 +14,4 @@ export const UUDISKIRI_URL = 'https://pokumaa.ee/uudiskiri';
  */
 export const NEWSLETTER_ENDPOINT = import.meta.env.VITE_NEWSLETTER_ENDPOINT || '';
 export const GA4_ID = 'G-XXXXXXX';
-eexport const META_PIXEL_ID = 'XXXXXXXXXX';
+ export const META_PIXEL_ID = 'XXXXXXXXXX';
