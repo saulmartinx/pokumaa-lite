@@ -1,87 +1,39 @@
-import { useState } from 'react';
-import { BRONEERI_URL, EPOOD_URL, UUDISKIRI_URL } from '../config.ts';
-import NewsletterForm from './NewsletterForm.jsx';
-import ProductModal from './ProductModal.jsx';
+import { BRONEERI_URL, EPOOD_URL } from "../config"; // kohanda rada kui vaja
 
-const products = [
-  { id: 1, name: 'Poku T-särk', description: 'Õrgekvaliteediline T-särk Pokumaa teemaliste illustratsioonidega.', price: '19.90€', image: '/poku-shirt.jpg' },
-  { id: 2, name: 'Poku müts', description: 'Stiilne ja soe müts kõigile Pokumaa fännidele.', price: '9.90€', image: '/poku-mug.jpg' },
-];
+{/* HERO */}
+<section className="min-h-[90vh] relative overflow-hidden flex items-center">
+  {/* taust + overlay */}
+  <div
+    aria-hidden="true"
+    className="absolute inset-0 bg-cover bg-center"
+    style={{ backgroundImage: "url('/assets/hero-forest.jpg')" }}  /* pane oma loodusfoto siia */
+  />
+  <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/30" />
 
-const PokumaaLanding = () => {
-  // Maintain a simple cart state (array of product items)
-  const [cart, setCart] = useState([]);
-  const [selectedProduct, setSelectedProduct] = useState(null);
+  {/* sisu */}
+  <div className="relative z-10 container mx-auto px-6 max-w-5xl">
+    <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl text-cream drop-shadow-md">
+      Tule Pokumaale!
+    </h1>
+    <p className="font-heading mt-4 text-cream/90 text-lg sm:text-xl max-w-2xl">
+      Seiklus kogu perele – loodus, mäng ja maagia.
+    </p>
 
-  const handleAddToCart = (product) => {
-    setCart((prev) => [...prev, product]);
-    setSelectedProduct(null);
-  };
-
-  return (
-    <div className="p-8 text-center space-y-12">
-      <section>
-        <h1 className="text-4xl font-bold mb-4">Tere tulemast Pokumaale</h1>
-        <p className="mb-6 max-w-xl mx-auto">
-          Avasta Pokumaa maagiline maailm, kus ootavad ees seiklused, sõbrad ja põnevaid mänge.
-        </p>
-        <div className="flex flex-wrap justify-center gap-4">
-          <a href={BRONEERI_URL} aria-label="Broneeri külastus" className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-md">
-            Broneeri külastus
-          </a>
-          <a href={EPOOD_URL} aria-label="Vaata e-poodi" className="px-6 py-3 border border-green-600 text-green-600 rounded-md hover:bg-green-100">
-            Vaata e-poodi
-          </a>
-          <a href={UUDISKIRI_URL} aria-label="Liitu uudiskirjaga" className="px-6 py-3 bg-blue-100 text-blue-900 rounded-md hover:bg-blue-200">
-            Liitu uudiskirjaga
-          </a>
-        </div>
-      </section>
-
-      {/* Shop section with products */}
-      <section aria-label="Pokumaa e-pood" className="space-y-6">
-        <h2 className="text-3xl font-bold">Meie Merch</h2>
-        <div className="grid gap-6 sm:grid-cols-2 justify-center">
-          {products.map((product) => (
-            <div key={product.id} className="border rounded-xl p-4 text-left">
-              <img src={product.image} alt={product.name} loading="lazy" className="w-full h-40 object-cover rounded mb-3" />
-              <h3 className="text-lg font-semibold">{product.name}</h3>
-              <p className="text-sm text-gray-600">{product.description}</p>
-              <div className="flex items-center justify-between mt-3">
-                <span className="font-bold">{product.price}</span>
-                <div className="flex gap-2">
-                  <button aria-label="Vaata toote infot" onClick={() => setSelectedProduct(product)} className="px-3 py-2 border rounded">
-                    Info
-                  </button>
-                  <button aria-label="Lisa ostukorvi" onClick={() => { setSelectedProduct(product); }} className="px-3 py-2 bg-green-600 hover:bg-green-700 text-white rounded">
-                    Lisa ostukorvi
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-        {selectedProduct && (
-          <ProductModal
-            product={selectedProduct}
-            onClose={() => setSelectedProduct(null)}
-            onAddToCart={handleAddToCart}
-          />
-        )}
-        {cart.length > 0 && (
-          <p className="mt-4 text-sm text-gray-600" aria-live="polite">
-            Ostukorvis: {cart.length} toodet
-          </p>
-        )}
-      </section>
-
-      {/* Newsletter section */}
-      <section aria-label="Uudiskirja tellimine" className="max-w-md mx-auto">
-        <h2 className="text-3xl font-bold mb-2">Liitu uudiskirjaga</h2>
-        <NewsletterForm />
-      </section>
+    <div className="mt-8 flex flex-wrap gap-4">
+      <a
+        href={BRONEERI_URL}
+        aria-label="Broneeri külastus"
+        className="inline-block px-6 py-3 bg-[linear-gradient(90deg,#3A5A40,#FFD166)] text-forest rounded-xl hover:scale-[1.02] transition focus:outline-none focus:ring-2 focus:ring-honey"
+      >
+        Broneeri külastus
+      </a>
+      <a
+        href={EPOOD_URL}
+        aria-label="Osta Poku koju"
+        className="inline-block px-6 py-3 bg-[linear-gradient(90deg,#3A5A40,#FFD166)] text-forest rounded-xl hover:scale-[1.02] transition focus:outline-none focus:ring-2 focus:ring-honey"
+      >
+        Osta Poku koju
+      </a>
     </div>
-  );
-};
-
-export default PokumaaLanding;
+  </div>
+</section>
