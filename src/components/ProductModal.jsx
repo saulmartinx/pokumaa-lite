@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+i
 
 /**
  * Modal component to display product details and provide a button to add the
@@ -51,14 +51,5 @@ const ProductModal = ({ product, onAddToCart, onClose }) => {
   )
 }
 
-ProductModal.propTypes = {
-  product: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-  }).isRequired,
-  onAddToCart: PropTypes.func.isRequired,
-  onClose: PropTypes.func.isRequired,
-}
 
 export default ProductModal
