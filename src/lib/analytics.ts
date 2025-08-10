@@ -1,4 +1,6 @@
-import { GA4_ID, META_PIXEL_ID } from "@/config";
+
+import { GA4_ID, META_PIXEL_ID } from '../config.ts';
+//mport { GA4_ID, META_PIXEL_ID }'../config.ts';
 
 export function initGA4() {
   if (!GA4_ID) return;
